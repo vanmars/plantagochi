@@ -19,6 +19,11 @@ const samwise = plant.succulent("Samwise");
 const samwiseStateControl = store.storeState(samwise);
 
 $(document).ready(function() {
+  $('#orchid-name').text(`${octavia.name} the Orchid`)
+  $('#palm-name').text(`${peter.name} the Palm`)
+  $('#cactus-name').text(`${callie.name} the Cactus`)
+  $('#succulent-name').text(`${samwise.name} the Succulent`)
+
   // Orchid Functionality
   $('#feed-orchid').click(function() {
     const newState = octaviaStateControl(plant.feed);
