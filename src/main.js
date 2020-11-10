@@ -44,7 +44,22 @@ $(document).ready(function() {
     $('#palm-stats').text(`Soil: ${currentState.soil} Water: ${currentState.water} Light: ${currentState.light}`);
   });
 
-
+  //  Fern Functionality
+  $('#feed-fern').click(function() {
+    const newState = fern(plant.feed);
+    const currentState = fern();
+    $('#fern-stats').text(`Soil: ${currentState.soil} Water: ${currentState.water} Light: ${currentState.light}`);
+  });
+  $('#water-fern').click(function() {
+    const newState = fern(plant.water);
+    const currentState = fern();
+    $('#fern-stats').text(`Soil: ${currentState.soil} Water: ${currentState.water} Light: ${currentState.light}`);
+  });
+  $('#light-fern').click(function() {
+    const newState = fern(plant.light);
+    const currentState = fern();
+    $('#fern-stats').text(`Soil: ${currentState.soil} Water: ${currentState.water} Light: ${currentState.light}`);
+  });
 
   
 
