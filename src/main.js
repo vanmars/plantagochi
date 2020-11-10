@@ -3,78 +3,87 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import * as plant from './js/plant.js';
+import * as store from './js/store.js';
 
-let iris = plant.irisStateControl; 
-let palm = plant.palmStateControl; 
-let fern = plant.fernStateControl; 
-let succulent = plant.succulentStateControl; 
+// Plant Objects and State Controls
+const octavia = plant.orchid("Octavia");
+const octaviaStateControl = store.storeState(octavia);
+
+const peter = plant.palm("Peter");
+const peterStateControl = store.storeState(peter);
+
+const callie = plant.cactus("Callie");
+const callieStateControl = store.storeState(callie);
+
+const samwise = plant.succulent("Samwise");
+const samwiseStateControl = store.storeState(samwise);
 
 $(document).ready(function() {
-  // Iris Functionality
-  $('#feed-iris').click(function() {
-    const newState = iris(plant.feed);
-    const currentState = iris();
-    $('#iris-stats').html(`<p>Soil: ${currentState.soil}</p> <p>Water: ${currentState.water}</p> <p>Light: ${currentState.light}</p>`);
+  // Orchid Functionality
+  $('#feed-orchid').click(function() {
+    const newState = octaviaStateControl(plant.feed);
+    const currentState = octaviaStateControl();
+    $('#orchid-stats').html(`<p>Soil: ${currentState.soil}</p> <p>Water: ${currentState.water}</p> <p>Light: ${currentState.light}</p>`);
   });
-  $('#water-iris').click(function() {
-    const newState = iris(plant.water);
-    const currentState = iris();
-    $('#iris-stats').html(`<p>Soil: ${currentState.soil}</p> <p>Water: ${currentState.water}</p> <p>Light: ${currentState.light}</p>`);
+  $('#water-orchid').click(function() {
+    const newState = octaviaStateControl(plant.water);
+    const currentState = octaviaStateControl();
+    $('#orchid-stats').html(`<p>Soil: ${currentState.soil}</p> <p>Water: ${currentState.water}</p> <p>Light: ${currentState.light}</p>`);
   });
-  $('#light-iris').click(function() {
-    const newState = iris(plant.light);
-    const currentState = iris();
-    $('#iris-stats').html(`<p>Soil: ${currentState.soil}</p> <p>Water: ${currentState.water}</p> <p>Light: ${currentState.light}</p>`);
+  $('#light-orchid').click(function() {
+    const newState = octaviaStateControl(plant.light);
+    const currentState = octaviaStateControl();
+    $('#orchid-stats').html(`<p>Soil: ${currentState.soil}</p> <p>Water: ${currentState.water}</p> <p>Light: ${currentState.light}</p>`);
   });
 
    // Palm Functionality
    $('#feed-palm').click(function() {
-    const newState = palm(plant.feed);
-    const currentState = palm();
+    const newState = peterStateControl(plant.feed);
+    const currentState = peterStateControl();
     $('#palm-stats').html(`<p>Soil: ${currentState.soil}</p> <p>Water: ${currentState.water}</p> <p>Light: ${currentState.light}</p>`);
   });
   $('#water-palm').click(function() {
-    const newState = palm(plant.water);
-    const currentState = palm();
+    const newState = peterStateControl(plant.water);
+    const currentState = peterStateControl();
     $('#palm-stats').html(`<p>Soil: ${currentState.soil}</p> <p>Water: ${currentState.water}</p> <p>Light: ${currentState.light}</p>`);
   });
   $('#light-palm').click(function() {
-    const newState = palm(plant.light);
-    const currentState = palm();
+    const newState = peterStateControl(plant.light);
+    const currentState = peterStateControl();
     $('#palm-stats').html(`<p>Soil: ${currentState.soil}</p> <p>Water: ${currentState.water}</p> <p>Light: ${currentState.light}</p>`);
   });
 
-  //  Fern Functionality
-  $('#feed-fern').click(function() {
-    const newState = fern(plant.feed);
-    const currentState = fern();
-    $('#fern-stats').html(`<p>Soil: ${currentState.soil}</p> <p>Water: ${currentState.water}</p> <p>Light: ${currentState.light}</p>`);
+  //  Cactus Functionality
+  $('#feed-cactus').click(function() {
+    const newState = callieStateControl(plant.feed);
+    const currentState = callieStateControl();
+    $('#cactus-stats').html(`<p>Soil: ${currentState.soil}</p> <p>Water: ${currentState.water}</p> <p>Light: ${currentState.light}</p>`);
   });
-  $('#water-fern').click(function() {
-    const newState = fern(plant.water);
-    const currentState = fern();
-    $('#fern-stats').html(`<p>Soil: ${currentState.soil}</p> <p>Water: ${currentState.water}</p> <p>Light: ${currentState.light}</p>`);
+  $('#water-cactus').click(function() {
+    const newState = callieStateControl(plant.water);
+    const currentState = callieStateControl();
+    $('#cactus-stats').html(`<p>Soil: ${currentState.soil}</p> <p>Water: ${currentState.water}</p> <p>Light: ${currentState.light}</p>`);
   });
-  $('#light-fern').click(function() {
-    const newState = fern(plant.light);
-    const currentState = fern();
-    $('#fern-stats').html(`<p>Soil: ${currentState.soil}</p> <p>Water: ${currentState.water}</p> <p>Light: ${currentState.light}</p>`);
+  $('#light-cactus').click(function() {
+    const newState = callieStateControl(plant.light);
+    const currentState = callieStateControl();
+    $('#cactus-stats').html(`<p>Soil: ${currentState.soil}</p> <p>Water: ${currentState.water}</p> <p>Light: ${currentState.light}</p>`);
   });
 
    // Succulent Functionality
    $('#feed-succulent').click(function() {
-    const newState = succulent(plant.feed);
-    const currentState = succulent();
+    const newState = samwiseStateControl(plant.feed);
+    const currentState = samwiseStateControl();
     $('#succulent-stats').html(`<p>Soil: ${currentState.soil}</p> <p>Water: ${currentState.water}</p> <p>Light: ${currentState.light}</p>`);
   });
   $('#water-succulent').click(function() {
-    const newState = succulent(plant.water);
-    const currentState = succulent();
+    const newState = samwiseStateControl(plant.water);
+    const currentState = samwiseStateControl();
     $('#succulent-stats').html(`<p>Soil: ${currentState.soil}</p> <p>Water: ${currentState.water}</p> <p>Light: ${currentState.light}</p>`);
   });
   $('#light-succulent').click(function() {
-    const newState = succulent(plant.light);
-    const currentState = succulent();
+    const newState = samwiseStateControl(plant.light);
+    const currentState = samwiseStateControl();
     $('#succulent-stats').html(`<p>Soil: ${currentState.soil}</p> <p>Water: ${currentState.water}</p> <p>Light: ${currentState.light}</p>`);
   });
 });
