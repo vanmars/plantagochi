@@ -61,10 +61,20 @@ $(document).ready(function() {
     $('#fern-stats').text(`Soil: ${currentState.soil} Water: ${currentState.water} Light: ${currentState.light}`);
   });
 
-  
-
-
-
-
-
+   // Succulent Functionality
+   $('#feed-succulent').click(function() {
+    const newState = succulent(plant.feed);
+    const currentState = succulent();
+    $('#succulent-stats').text(`Soil: ${currentState.soil} Water: ${currentState.water} Light: ${currentState.light}`);
+  });
+  $('#water-succulent').click(function() {
+    const newState = succulent(plant.water);
+    const currentState = succulent();
+    $('#succulent-stats').text(`Soil: ${currentState.soil} Water: ${currentState.water} Light: ${currentState.light}`);
+  });
+  $('#light-succulent').click(function() {
+    const newState = succulent(plant.light);
+    const currentState = succulent();
+    $('#succulent-stats').text(`Soil: ${currentState.soil} Water: ${currentState.water} Light: ${currentState.light}`);
+  });
 });
