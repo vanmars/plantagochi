@@ -41,14 +41,14 @@ $(document).ready(function() {
     $('#orchid-stats').html(`<p>Soil: ${currentState.soil}</p> <p>Water: ${currentState.water}</p> <p>Light: ${currentState.light}</p>`);
   });
 
-   // Palm Functionality
-   $('#feed-palm').click(function() {
-    const newState = peterStateControl(plant.feed);
+  // Palm Functionality
+  $('#feed-palm').click(function() {
+    const newState = peterStateControl(plant.superFeed);
     const currentState = peterStateControl();
     $('#palm-stats').html(`<p>Soil: ${currentState.soil}</p> <p>Water: ${currentState.water}</p> <p>Light: ${currentState.light}</p>`);
   });
   $('#water-palm').click(function() {
-    const newState = peterStateControl(plant.water);
+    const newState = peterStateControl(plant.superWater);
     const currentState = peterStateControl();
     $('#palm-stats').html(`<p>Soil: ${currentState.soil}</p> <p>Water: ${currentState.water}</p> <p>Light: ${currentState.light}</p>`);
   });
@@ -60,7 +60,7 @@ $(document).ready(function() {
 
   //  Cactus Functionality
   $('#feed-cactus').click(function() {
-    const newState = callieStateControl(plant.feed);
+    const newState = callieStateControl(plant.superFeed);
     const currentState = callieStateControl();
     $('#cactus-stats').html(`<p>Soil: ${currentState.soil}</p> <p>Water: ${currentState.water}</p> <p>Light: ${currentState.light}</p>`);
   });
@@ -70,13 +70,13 @@ $(document).ready(function() {
     $('#cactus-stats').html(`<p>Soil: ${currentState.soil}</p> <p>Water: ${currentState.water}</p> <p>Light: ${currentState.light}</p>`);
   });
   $('#light-cactus').click(function() {
-    const newState = callieStateControl(plant.light);
+    const newState = callieStateControl(plant.superLight);
     const currentState = callieStateControl();
     $('#cactus-stats').html(`<p>Soil: ${currentState.soil}</p> <p>Water: ${currentState.water}</p> <p>Light: ${currentState.light}</p>`);
   });
 
-   // Succulent Functionality
-   $('#feed-succulent').click(function() {
+  // Succulent Functionality
+  $('#feed-succulent').click(function() {
     const newState = samwiseStateControl(plant.feed);
     const currentState = samwiseStateControl();
     $('#succulent-stats').html(`<p>Soil: ${currentState.soil}</p> <p>Water: ${currentState.water}</p> <p>Light: ${currentState.light}</p>`);
@@ -87,7 +87,7 @@ $(document).ready(function() {
     $('#succulent-stats').html(`<p>Soil: ${currentState.soil}</p> <p>Water: ${currentState.water}</p> <p>Light: ${currentState.light}</p>`);
   });
   $('#light-succulent').click(function() {
-    const newState = samwiseStateControl(plant.light);
+    const newState = samwiseStateControl(plant.superLight);
     const currentState = samwiseStateControl();
     $('#succulent-stats').html(`<p>Soil: ${currentState.soil}</p> <p>Water: ${currentState.water}</p> <p>Light: ${currentState.light}</p>`);
   });

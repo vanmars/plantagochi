@@ -1,13 +1,12 @@
 import * as store from './store.js';
 
-// Functions Created with changeState Function Factory
+// Functions Created with Change State Function Factory
 export const feed = store.changeState("soil")(1);
 export const superFeed = store.changeState("soil")(5);
 export const water = store.changeState("water")(1);
 export const superWater = store.changeState("water")(5);
 export const light = store.changeState("light")(1);
 export const superLight = store.changeState("light")(5);
-
 
 // Plant Method Compositions
 const canBeColorful = (plant) => ({
