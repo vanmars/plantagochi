@@ -10,19 +10,19 @@ export const superLight = store.changeState("light")(5);
 
 // Plant Method Compositions
 const canBeColorful = (plant) => ({
-  color: (color) => `${plant.name.toUpperCase()} is ${color}.`
+  color: (color) => `${plant.name} is ${color}.`
 });
 
 const canShade = (plant) => ({
-  shade: (item) => `${plant.name.toUpperCase()} is shading ${item}.`
+  shade: (item) => `${plant.name} is shading ${item}.`
 })
 
 const canPoke = (plant) => ({
-  poke: (item) => `${plant.name.toUpperCase()} is poking ${item}.`
+  poke: (item) => `${plant.name} is poking ${item}.`
 })
 
 const canCharm = (plant) => ({
-  charm: (item) => `${plant.name.toUpperCase()} is charming ${item}.`
+  charm: (item) => `${plant.name} is charming ${item}.`
 })
 
 const canSleep = (plant) => ({
