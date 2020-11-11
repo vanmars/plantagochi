@@ -1,4 +1,4 @@
-# _Power Plant_
+# :decidious_tree: :cherry_blossom: _Power Plant_ :cactus: :palm_tree:
 
 _10 November 2020_
 
@@ -23,6 +23,14 @@ _This is an exercise for Epicodus to practice functional programming. The progra
 ## Known Bugs
 
 _There are no known bugs at this time._
+
+## Next Steps
+
+1. Add form for entering creating a new plant. Needs a drop down menu for plant type (orchid, palm, cactus, or succulent) and a name field, so that users can add their own plants. Right now, four plants are hard-coded.
+2. Add more plant types.
+3. Add button to invoke sleep property of each plant and show that the plant is sleeping.
+3. Figure out a way to metaphorically pass time to allow soil, water, and light levels to deplete. Could just be a button called "Next Day." This button would need to be tied to a function that would deplete each plant type by a certain amount.
+4. Could also add in a wildcard button, like "Snowstorm" which would deplete plant levels even more, possibly randomly.
 
 ## Support and contact details
 
