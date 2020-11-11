@@ -26,9 +26,7 @@ $(document).ready(function() {
   $('#orchid-name').text(`${octavia.name} the Orchid`);
   $('#palm-name').text(`${peter.name} the Palm`);
   $('#cactus-name').text(`${callie.name} the Cactus`)
-
   $('#succulent-name').text(`${samwise.name} the Succulent`)
-  $('#succulent-powers').text(`${samwise.charm("everyone")}`);
 
   // Orchid Functionality
   $('#orchid-form').submit(function(event){
@@ -80,7 +78,6 @@ $(document).ready(function() {
     const inputtedItem = $('input#cactus-item').val();
     $('#cactus-powers').text(`${callie.poke(inputtedItem)}`);
   })
-
   $('#feed-cactus').click(function() {
     const newState = callieStateControl(plant.superFeed);
     const currentState = callieStateControl();
@@ -98,6 +95,11 @@ $(document).ready(function() {
   });
 
   // Succulent Functionality
+  $('#succulent-form').submit(function(event){
+    event.preventDefault();
+    const inputtedItem = $('input#succulent-item').val();
+    $('#succulent-powers').text(`${samwise.charm(inputtedItem)}`);
+  })
   $('#feed-succulent').click(function() {
     const newState = samwiseStateControl(plant.feed);
     const currentState = samwiseStateControl();
