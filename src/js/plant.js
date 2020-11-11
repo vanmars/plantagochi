@@ -16,46 +16,46 @@ const canBeColorful = (plant) => ({
 
 const canShade = (plant) => ({
   shade: (item) => `${plant.name} is shading ${item}.`
-})
+});
 
 const canPoke = (plant) => ({
   poke: (item) => `${plant.name} is poking ${item}.`
-})
+});
 
 const canCharm = (plant) => ({
   charm: (item) => `${plant.name} is charming ${item}.`
-})
+});
 
 const canSleep = (plant) => ({
   sleep: () => `${plant.name} is sleeping.`
-})
+});
 
 
 // Plant Function Factories
 export const orchid = (name) => {
   let state = {
     name
-  }
-  return { ...state, ...canBeColorful(state), ...canSleep(state) }
-}
+  };
+  return { ...state, ...canBeColorful(state), ...canSleep(state) };
+};
 
 export const palm = (name) => {
   let state = {
     name
-  }
-  return { ...state, ...canShade(state), ...canSleep(state)}
-}
+  };
+  return { ...state, ...canShade(state), ...canSleep(state)};
+};
 
 export const cactus = (name) => {
   let state = {
     name
-  }
-  return { ...state, ...canPoke(state), ...canSleep(state)}
-}
+  };
+  return { ...state, ...canPoke(state), ...canSleep(state)};
+};
 
 export const succulent = (name) => {
   let state = {
     name
-  }
-  return { ...state, ...canCharm(state), ...canSleep(state)}
-}
+  };
+  return { ...state, ...canCharm(state), ...canSleep(state)};
+};
