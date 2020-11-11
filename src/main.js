@@ -25,9 +25,7 @@ $(document).ready(function() {
   // Card Names and Special Abilities
   $('#orchid-name').text(`${octavia.name} the Orchid`);
   $('#palm-name').text(`${peter.name} the Palm`);
-
   $('#cactus-name').text(`${callie.name} the Cactus`)
-  $('#cactus-powers').text(`${callie.poke("your mom")}`);
 
   $('#succulent-name').text(`${samwise.name} the Succulent`)
   $('#succulent-powers').text(`${samwise.charm("everyone")}`);
@@ -38,7 +36,6 @@ $(document).ready(function() {
     const inputtedColor = $('input#color').val();
     $('#orchid-powers').text(`${octavia.color(inputtedColor)}`);
   })
-
   $('#feed-orchid').click(function() {
     const newState = octaviaStateControl(plant.feed);
     const currentState = octaviaStateControl();
@@ -61,7 +58,6 @@ $(document).ready(function() {
     const inputtedItem = $('input#palm-item').val();
     $('#palm-powers').text(`${peter.shade(inputtedItem)}`);
   })
-
   $('#feed-palm').click(function() {
     const newState = peterStateControl(plant.superFeed);
     const currentState = peterStateControl();
@@ -79,6 +75,12 @@ $(document).ready(function() {
   });
 
   //  Cactus Functionality
+  $('#cactus-form').submit(function(event){
+    event.preventDefault();
+    const inputtedItem = $('input#cactus-item').val();
+    $('#cactus-powers').text(`${callie.poke(inputtedItem)}`);
+  })
+
   $('#feed-cactus').click(function() {
     const newState = callieStateControl(plant.superFeed);
     const currentState = callieStateControl();
