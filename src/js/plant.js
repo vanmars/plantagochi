@@ -8,6 +8,7 @@ export const superWater = store.changeState("water")(5);
 export const light = store.changeState("light")(1);
 export const superLight = store.changeState("light")(5);
 
+
 // Plant Method Compositions
 const canBeColorful = (plant) => ({
   color: (color) => `${plant.name} is ${color}.`
@@ -26,15 +27,16 @@ const canCharm = (plant) => ({
 })
 
 const canSleep = (plant) => ({
-  sleep: (item) => `${plant.name.toUpperCase()} is sleeping.`
+  sleep: () => `${plant.name} is sleeping.`
 })
+
 
 // Plant Function Factories
 export const orchid = (name) => {
   let state = {
     name
   }
-  return { ...state, ...canBeColorful(state), ...canSleep(state)}
+  return { ...state, ...canBeColorful(state), ...canSleep(state) }
 }
 
 export const palm = (name) => {

@@ -24,9 +24,7 @@ const samwiseStateControl = store.storeState(samwise);
 $(document).ready(function() {
   // Card Names and Special Abilities
   $('#orchid-name').text(`${octavia.name} the Orchid`);
-  
   $('#palm-name').text(`${peter.name} the Palm`);
-  $('#palm-powers').text(`${peter.shade("you")}`);
 
   $('#cactus-name').text(`${callie.name} the Cactus`)
   $('#cactus-powers').text(`${callie.poke("your mom")}`);
@@ -35,12 +33,12 @@ $(document).ready(function() {
   $('#succulent-powers').text(`${samwise.charm("everyone")}`);
 
   // Orchid Functionality
-
   $('#orchid-form').submit(function(event){
     event.preventDefault();
     const inputtedColor = $('input#color').val();
     $('#orchid-powers').text(`${octavia.color(inputtedColor)}`);
   })
+
   $('#feed-orchid').click(function() {
     const newState = octaviaStateControl(plant.feed);
     const currentState = octaviaStateControl();
@@ -58,6 +56,12 @@ $(document).ready(function() {
   });
 
   // Palm Functionality
+  $('#palm-form').submit(function(event){
+    event.preventDefault();
+    const inputtedItem = $('input#palm-item').val();
+    $('#palm-powers').text(`${peter.shade(inputtedItem)}`);
+  })
+
   $('#feed-palm').click(function() {
     const newState = peterStateControl(plant.superFeed);
     const currentState = peterStateControl();
