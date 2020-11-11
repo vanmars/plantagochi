@@ -1,4 +1,4 @@
-# :decidious_tree: :cherry_blossom: _Power Plant_ :cactus: :palm_tree:
+# :deciduous_tree: :cherry_blossom: :herb: _Plantagochi_ :cactus: :palm_tree: :sunflower:
 
 _10 November 2020_
 
