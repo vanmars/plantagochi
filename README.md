@@ -18,7 +18,7 @@ _This is an exercise for Epicodus to practice functional programming. The progra
 * Run `cd plantagochi` to navigate into new project directory.
 * Open the cloned repo in a text editor of your choice.
 * Run `npm install` to download all dependencies.
-* Run `npm start` to start a live server and view projec in the browser.
+* Run `npm run start` to start a live server and view projec in the browser.
 
 ## Known Bugs
 
